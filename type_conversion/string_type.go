@@ -16,6 +16,7 @@ import (
 )
 
 // 字符串类型的转化
+// conversion of string type
 // see https://chai2010.cn/advanced-go-programming-book/ch2-cgo/ch2-03-cgo-types.html
 func GetSetStringTypeVariables() {
 	// ------ get value ------
