@@ -7,6 +7,8 @@ package type_conversion
 
 int val_int = 1;
 int *p_v_int = &val_int;
+
+void *p = (void*)&val_int;
 */
 import "C"
 import (
@@ -35,4 +37,16 @@ func GetSetPointerTypeVariables() {
 	*C.p_v_int = math.MaxInt32
 	// print: MaxInt32
 	fmt.Println(*C.p_v_int)
+}
+
+func GetSetVoidPointerTypeVariables() {
+	// ------ get value ------
+	var p = (*int32)(unsafe.Pointer(C.p))
+	// print: 1
+	fmt.Println(*p)
+
+	// ------ set value ------
+	*p = 100
+	// print: 100
+	fmt.Println(C.val_int)
 }
