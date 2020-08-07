@@ -5,7 +5,6 @@ package type_conversion
 #include <stdio.h>
 #include <string.h>
 
-// ------------字符串类型 string type (char array)------------
 char *str = "hello golang";
 */
 import "C"

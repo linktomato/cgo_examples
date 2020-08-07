@@ -8,7 +8,7 @@ typedef struct {
 	// 如果存在成员变量名为"_type"，则此变量会被Go忽略。
 	// Member's name conflicts with Go's keyword,
 	// Go will access it by using name "_type".
-	// If there is some one named "_type" then this
+	// If there is another member named "_type" then this
     // member will be ignored in Go.
 	char *type;
 	char *_type;
@@ -36,7 +36,7 @@ func GetSetStructTypeVariables() {
 
 	// ------ set value ------
 	// 修改结构体成员变量值
-	// set struct member value
+	// set value to struct member
 	C.me.name = C.CString("old tomato")
 	C.me.age = C.int(60)
 	// print: old tomato
@@ -45,7 +45,7 @@ func GetSetStructTypeVariables() {
 	fmt.Println(C.me.age)
 
 	// 创建新的结构体变量
-	// set a new struct variable
+	// create a new struct
 	var me = C.programer{
 		name:  C.CString("super tomato"),
 		age:   C.int(120),
