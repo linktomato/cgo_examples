@@ -7,7 +7,7 @@ enum e {
 	ONE,
 	TWO
 };
-enum e e_val = ONE;
+enum e v_e = ONE;
 */
 import "C"
 import "fmt"
@@ -15,10 +15,10 @@ import "fmt"
 func GetSetEnumTypeVariable()  {
 	// ------ get value ------
 	// print: 0(ONE)
-	fmt.Println(C.e_val)
+	fmt.Println(C.v_e)
 
 	// ------ set value ------
-	C.e_val = C.TWO
+	C.v_e = C.TWO
 	// print: 1(TWO)
-	fmt.Println(C.e_val)
+	fmt.Println(C.v_e)
 }

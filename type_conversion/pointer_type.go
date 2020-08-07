@@ -5,10 +5,10 @@ package type_conversion
 #include <stdio.h>
 #include <string.h>
 
-int val_int = 1;
-int *p_v_int = &val_int;
+int var_int = 1;
+int *p_v_int = &var_int;
 
-void *p = (void*)&val_int;
+void *p = (void*)&var_int;
 */
 import "C"
 import (
@@ -48,5 +48,5 @@ func GetSetVoidPointerTypeVariables() {
 	// ------ set value ------
 	*p = 100
 	// print: 100
-	fmt.Println(C.val_int)
+	fmt.Println(C.var_int)
 }
