@@ -1,6 +1,6 @@
 # 简介
 本项目包含一些 cgo 的使用示例。主要由以下几个部分组成：
-## 类型转换 (已完成80%)
+## 类型转换 (已完成)
 类型转换的例子都在 type_conversion 包中，包内有几个文件：
 * basic_types 一些基本数据类型的转化例子
 * pointer_type 指针类型的转化例子
@@ -13,7 +13,16 @@
 ## 函数调用 (未开始)
 ## 库调用 (未开始)
 
+# 参考
+* https://golang.org/cmd/cgo/#hdr-C_references_to_Go
+* https://chai2010.cn/advanced-go-programming-book/ch2-cgo/readme.html
+* https://gcc.gnu.org/onlinedocs/gcc-8.4.0/gccgo/C-Type-Interoperability.html
+* https://stackoverflow.com/questions/6125683/call-go-functions-from-c
+* https://github.com/golang/go/issues/20639
+* https://stackoverflow.com/questions/19910647/pass-struct-and-array-of-structs-to-c-function-from-go
+* https://www.marlin.pro/blog/cgo-referencing-c-library-in-go/
 
+# 其他
 项目还在进行中，欢迎小伙伴纠错或者提意见。
 
-如果对你有帮助，麻烦给小猿点个小星星，感谢！
+如果本项目对你有帮助，麻烦给小猿点个小星星，感谢！
