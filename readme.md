@@ -14,6 +14,7 @@
 ## 库调用 (未开始)
 
 # 参考
+* https://golang.org/src/cmd/cgo/doc.go
 * https://golang.org/cmd/cgo/#hdr-C_references_to_Go
 * https://chai2010.cn/advanced-go-programming-book/ch2-cgo/readme.html
 * https://gcc.gnu.org/onlinedocs/gcc-8.4.0/gccgo/C-Type-Interoperability.html
