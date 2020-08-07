@@ -12,6 +12,10 @@ typedef struct {
     // member will be ignored in Go.
 	char *type;
 	char *_type;
+	// Go无法访问C结构体位字段
+	int status: 10;
+	// Go无法访问C结构体零长数组成员
+	int girl_friends[];
 } programer;
 
 programer me = {
@@ -33,6 +37,10 @@ func GetSetStructTypeVariables() {
 	// 如果成员变量的名字和
 	// print: primary engineer
 	fmt.Println(C.GoString(C.me._type))
+	// 无法访问位字段
+	// fmt.Println(C.me.status)
+	// 无法访问零长数组，因为程序员没有女朋友
+	//fmt.Println(C.me.girl_friends)
 
 	// ------ set value ------
 	// 修改结构体成员变量值
@@ -47,8 +55,8 @@ func GetSetStructTypeVariables() {
 	// 创建新的结构体变量
 	// create a new struct
 	var me = C.programer{
-		name:  C.CString("super tomato"),
-		age:   C.int(120),
+		name: C.CString("super tomato"),
+		age:  C.int(120),
 	}
 	C.me = me
 	// print: super tomato
